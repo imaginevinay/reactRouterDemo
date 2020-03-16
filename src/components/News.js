@@ -41,7 +41,7 @@ const News = ()=>{
     const [topNews,setItems] = useState([])
     
     const fetchTopHeadlines = async() => {
-        const data = await (await fetch("http://newsapi.org/v2/top-headlines?country=in&apiKey=9406929465d649e6835539889a61095b")).json();
+        const data = await (await fetch("https://newsapi.org/v2/top-headlines?country=in&apiKey=9406929465d649e6835539889a61095b")).json();
         const topHeadlines = data.articles;
         console.log("data",topHeadlines);
         setItems(topHeadlines);
